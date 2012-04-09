@@ -14,6 +14,8 @@
         <author href="https://blog.digitalbackcountry.com" email="ryan@adobe.com">
             Ryan Stewart
         </author>
+        
+        <preference name="phonegap-version" value="1.5.0" />
 
         <!-- if a single icon is specified then Build will use it for all platforms -->
         <icon src="icons/icon.png" />
