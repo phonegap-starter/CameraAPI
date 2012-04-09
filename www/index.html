@@ -3,7 +3,7 @@
   <head>
     <title>Capture Photo</title>
 
-    <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
     <script type="text/javascript" charset="utf-8">
 
     var pictureSource;   // picture source
@@ -16,8 +16,8 @@
     // Cordova is ready to be used!
     //
     function onDeviceReady() {
-        //pictureSource=navigator.camera.PictureSourceType;
-        //destinationType=navigator.camera.DestinationType;
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
     }
 
     // Called when a photo is successfully retrieved
@@ -79,7 +79,7 @@
     function getPhoto(source) {
       // Retrieve image file location from specified source
       navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
-        destinationType: Camera.DestinationType.FILE_URI,
+        destinationType: destinationType.FILE_URI,
         sourceType: source });
     }
 
